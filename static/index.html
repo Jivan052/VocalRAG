@@ -3,144 +3,301 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Voice RAG — Signal Console</title>
+<title>HH GOA — Ask Anything · Signal Console</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#0b0e10;
-    --panel:#12161a;
-    --panel-border:#22282e;
-    --text:#e7e9ea;
-    --text-dim:#7c8790;
-    --signal:#4fd1c5;      /* teal — "on budget" */
-    --signal-dim:#1f4f4a;
-    --warn:#e8a33d;        /* amber — ungrounded / off-budget */
-    --danger:#e2604f;
+    /* ---- HH Goa palette: deep forest green ground, gold + pink signal colors ---- */
+    --bg:#132e20;
+    --bg-2:#0d2318;
+    --card:#0a1c12;
+    --card-border:#2c5a3c;
+    --card-border-soft:#1f4530;
+    --cream:#f6efdc;
+    --text:#eee7d3;
+    --text-dim:#8fac97;
+    --gold:#f4cf3f;
+    --gold-dim:#6b5c22;
+    --pink:#ea3f8f;
+    --pink-dim:#552038;
     --mono:'IBM Plex Mono', monospace;
+    --serif:'Fraunces', serif;
     --sans:'Inter', sans-serif;
   }
   *{box-sizing:border-box;}
+  ::selection{ background:var(--pink); color:var(--bg); }
   body{
-    margin:0; background:var(--bg); color:var(--text);
+    margin:0;
+    background:
+      radial-gradient(1100px 500px at 85% -10%, rgba(244,207,63,.07), transparent 60%),
+      radial-gradient(900px 500px at -10% 110%, rgba(234,63,143,.08), transparent 60%),
+      var(--bg);
+    color:var(--text);
     font-family:var(--sans);
     min-height:100vh;
-    display:flex; flex-direction:column; align-items:center;
-    padding:48px 20px 80px;
+  }
+  a{ color:var(--gold); }
+
+  .wrap{ max-width:920px; margin:0 auto; padding:44px 22px 90px; }
+
+  /* ---- header row ---- */
+  .header-row{
+    display:flex; justify-content:space-between; align-items:flex-start;
+    gap:24px; flex-wrap:wrap; margin-bottom:34px;
   }
   .eyebrow{
     font-family:var(--mono); font-size:11px; letter-spacing:.18em;
-    text-transform:uppercase; color:var(--signal); margin-bottom:10px;
+    text-transform:uppercase; color:var(--pink); margin-bottom:14px;
   }
   h1{
-    font-size:26px; font-weight:700; margin:0 0 6px; letter-spacing:-0.01em;
+    font-family:var(--serif); font-weight:700; font-size:52px; line-height:0.98;
+    margin:0 0 16px; letter-spacing:-0.01em; color:var(--gold);
+    max-width:520px;
   }
-  .sub{ color:var(--text-dim); font-size:14px; margin-bottom:44px; text-align:center; max-width:440px; }
+  h1 em{ font-style:normal; color:var(--cream); }
+  .sub{ color:var(--text-dim); font-size:14.5px; line-height:1.6; max-width:400px; }
 
-  /* --- mic control --- */
-  .mic-wrap{ position:relative; display:flex; flex-direction:column; align-items:center; gap:18px; }
+  .status-pill{
+    display:inline-flex; align-items:center; gap:7px;
+    font-family:var(--mono); font-size:11px; letter-spacing:.04em;
+    color:var(--text-dim); border:1px solid var(--card-border-soft);
+    padding:6px 12px; border-radius:20px; margin-top:16px;
+  }
+  .status-pill .dot{ width:6px; height:6px; border-radius:50%; background:var(--gold); box-shadow:0 0 0 3px rgba(244,207,63,.15); }
+
+  /* ---- callout, top right, Piperrube-style boxed stat ---- */
+  .callout{
+    border:1px solid var(--card-border); background:var(--card);
+    border-radius:4px; padding:16px 18px; max-width:270px;
+    font-size:12.5px; color:var(--text-dim); line-height:1.55; flex-shrink:0;
+  }
+  .callout b{ color:var(--cream); }
+  .callout .stat{
+    margin-top:10px; display:flex; align-items:baseline; gap:6px;
+    font-family:var(--mono);
+  }
+  .callout .stat .num{ font-size:20px; color:var(--gold); font-weight:600; }
+  .callout .stat .lbl{ font-size:11px; color:var(--text-dim); }
+
+  /* ---- session bar, mirrors "PREVIOUS SESSIONS" strip ---- */
+  .session-bar{
+    display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+    background:var(--card); border:1px solid var(--card-border);
+    border-radius:4px; padding:14px 16px; margin-bottom:0;
+  }
+  .session-bar .label{
+    font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; color:var(--text-dim);
+    text-transform:uppercase; flex-shrink:0;
+  }
+  .session-bar .count{
+    flex:1; font-family:var(--mono); font-size:12.5px; color:var(--text);
+    border:1px solid var(--card-border-soft); border-radius:3px; padding:8px 12px;
+    background:var(--bg-2);
+  }
+  .btn{
+    font-family:var(--mono); font-size:11.5px; letter-spacing:.03em;
+    border:1px solid var(--gold); background:var(--gold); color:#1a1206;
+    padding:9px 16px; border-radius:3px; cursor:pointer; font-weight:600;
+    transition:background .15s, color .15s, border-color .15s;
+  }
+  .btn:hover{ background:transparent; color:var(--gold); }
+  .btn.ghost{
+    background:transparent; color:var(--text-dim); border-color:var(--card-border-soft);
+    font-weight:500;
+  }
+  .btn.ghost:hover{ border-color:var(--pink); color:var(--pink); }
+  .btn:focus-visible, .mic-btn:focus-visible, .tab:focus-visible{ outline:2px solid var(--pink); outline-offset:2px; }
+
+  /* ---- tabs, Piperrube-style black/active bar ---- */
+  .tabs{
+    display:flex; margin-top:26px; border:1px solid var(--card-border);
+    border-radius:4px 4px 0 0; overflow:hidden;
+  }
+  .tab{
+    flex:1; text-align:center; padding:13px 10px; font-family:var(--mono);
+    font-size:11.5px; letter-spacing:.08em; text-transform:uppercase;
+    background:var(--bg-2); color:var(--text-dim); cursor:pointer; border:none;
+    border-right:1px solid var(--card-border); transition:background .15s,color .15s;
+  }
+  .tab:last-child{ border-right:none; }
+  .tab.active{ background:var(--gold); color:#1a1206; font-weight:600; }
+  .panel{
+    border:1px solid var(--card-border); border-top:none; border-radius:0 0 4px 4px;
+    background:var(--card); padding:34px 26px 30px;
+  }
+
+  /* ---- mic control ---- */
+  .mic-wrap{ display:flex; flex-direction:column; align-items:center; gap:16px; }
   .mic-btn{
-    width:96px; height:96px; border-radius:50%;
-    background:var(--panel); border:1.5px solid var(--panel-border);
-    color:var(--text); cursor:pointer;
+    width:92px; height:92px; border-radius:50%;
+    background:var(--bg-2); border:1.5px solid var(--card-border);
+    color:var(--gold); cursor:pointer;
     display:flex; align-items:center; justify-content:center;
     transition:border-color .2s, box-shadow .2s, transform .1s;
-    position:relative;
   }
-  .mic-btn:hover{ border-color:var(--signal); }
+  .mic-btn:hover{ border-color:var(--gold); }
   .mic-btn:active{ transform:scale(.97); }
   .mic-btn.recording{
-    border-color:var(--danger);
-    box-shadow:0 0 0 0 rgba(226,96,79,.5);
+    border-color:var(--pink); color:var(--pink);
     animation:pulse 1.4s infinite;
   }
   @keyframes pulse{
-    0%{ box-shadow:0 0 0 0 rgba(226,96,79,.45); }
-    70%{ box-shadow:0 0 0 16px rgba(226,96,79,0); }
-    100%{ box-shadow:0 0 0 0 rgba(226,96,79,0); }
+    0%{ box-shadow:0 0 0 0 rgba(234,63,143,.45); }
+    70%{ box-shadow:0 0 0 18px rgba(234,63,143,0); }
+    100%{ box-shadow:0 0 0 0 rgba(234,63,143,0); }
   }
-  .mic-btn svg{ width:30px; height:30px; }
+  .mic-btn svg{ width:28px; height:28px; }
   .status{ font-family:var(--mono); font-size:12px; color:var(--text-dim); min-height:16px; }
-  .status.active{ color:var(--danger); }
+  .status.active{ color:var(--pink); }
 
-  /* --- answer card --- */
+  /* ---- answer card ---- */
   .answer-card{
-    margin-top:44px; width:100%; max-width:560px;
-    background:var(--panel); border:1px solid var(--panel-border); border-radius:10px;
-    padding:22px 24px; display:none;
+    margin-top:32px; border:1px solid var(--card-border-soft); border-radius:4px;
+    padding:20px 22px; display:none; background:var(--bg-2);
   }
   .answer-card.show{ display:block; animation:fadeUp .35s ease; }
   @keyframes fadeUp{ from{ opacity:0; transform:translateY(6px);} to{opacity:1; transform:none;} }
-  .answer-card .q{ font-family:var(--mono); font-size:12px; color:var(--text-dim); margin-bottom:10px; }
-  .answer-card .a{ font-size:16px; line-height:1.55; }
+  .answer-card .q{ font-family:var(--mono); font-size:11.5px; color:var(--text-dim); margin-bottom:10px; }
+  .answer-card .a{ font-size:15.5px; line-height:1.6; color:var(--cream); }
   .flags{ margin-top:14px; display:flex; gap:8px; flex-wrap:wrap; }
   .flag{
-    font-family:var(--mono); font-size:10.5px; padding:3px 8px; border-radius:20px;
-    border:1px solid var(--panel-border); color:var(--text-dim);
+    font-family:var(--mono); font-size:10.5px; padding:3px 9px; border-radius:20px;
+    border:1px solid var(--card-border-soft); color:var(--text-dim);
   }
-  .flag.ok{ color:var(--signal); border-color:var(--signal-dim); }
-  .flag.warn{ color:var(--warn); border-color:#4a3c1f; }
+  .flag.ok{ color:var(--gold); border-color:var(--gold-dim); }
+  .flag.warn{ color:var(--pink); border-color:var(--pink-dim); }
 
-  /* --- signal path (signature element) --- */
-  .path{ margin-top:26px; width:100%; max-width:560px; display:none; }
+  /* ---- tide line (signature signal-path element) ---- */
+  .path{ margin-top:30px; display:none; }
   .path.show{ display:block; }
-  .path-title{ font-family:var(--mono); font-size:11px; color:var(--text-dim); margin-bottom:10px; letter-spacing:.06em; }
+  .path-title{ font-family:var(--mono); font-size:10.5px; color:var(--text-dim); margin-bottom:10px; letter-spacing:.08em; text-transform:uppercase; }
   .track{
-    display:flex; width:100%; height:34px; border-radius:6px; overflow:hidden;
-    background:var(--panel); border:1px solid var(--panel-border);
+    display:flex; width:100%; height:30px; border-radius:3px; overflow:hidden;
+    background:var(--bg-2); border:1px solid var(--card-border-soft);
+    position:relative;
+  }
+  .track::after{
+    content:''; position:absolute; left:0; right:0; bottom:0; height:2px;
+    background:repeating-linear-gradient(90deg, var(--card-border) 0 6px, transparent 6px 12px);
   }
   .seg{
-    height:100%; background:var(--signal-dim); position:relative;
+    height:100%; background:var(--gold-dim); position:relative;
     transition:flex-grow .5s ease, background .3s ease;
-    flex-grow:0;
-    border-right:1px solid var(--bg);
+    flex-grow:0; border-right:1px solid var(--bg);
   }
   .seg:last-child{ border-right:none; }
-  .seg.lit{ background:var(--signal); }
-  .seg.hot{ background:var(--warn); } /* stage that blew the retrieval budget */
+  .seg.lit{ background:var(--gold); }
+  .seg.hot{ background:var(--pink); }
   .legend{
     display:flex; flex-wrap:wrap; gap:12px; margin-top:10px;
     font-family:var(--mono); font-size:10.5px; color:var(--text-dim);
   }
-  .legend span b{ color:var(--text); }
+  .legend span b{ color:var(--cream); }
   .budget-note{
-    margin-top:8px; font-family:var(--mono); font-size:10.5px; color:var(--text-dim);
+    margin-top:10px; font-family:var(--mono); font-size:10.5px; color:var(--text-dim);
   }
 
-  footer{ margin-top:60px; font-family:var(--mono); font-size:10.5px; color:#3d454b; text-align:center; }
+  /* ---- session log table ---- */
+  .log-head{ display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; }
+  .log-head h2{ font-family:var(--serif); font-size:20px; color:var(--gold); margin:0; font-weight:600; }
+  table.log{ width:100%; border-collapse:collapse; font-size:13px; }
+  table.log th{
+    font-family:var(--mono); font-size:10px; letter-spacing:.08em; text-transform:uppercase;
+    text-align:left; color:var(--text-dim); padding:8px 10px; border-bottom:1px solid var(--card-border);
+  }
+  table.log td{ padding:10px; border-bottom:1px solid var(--card-border-soft); color:var(--text); vertical-align:top; }
+  table.log tr:last-child td{ border-bottom:none; }
+  .pill-small{
+    font-family:var(--mono); font-size:10px; padding:2px 8px; border-radius:20px;
+    border:1px solid var(--card-border-soft); color:var(--text-dim); display:inline-block;
+  }
+  .pill-small.ok{ color:var(--gold); border-color:var(--gold-dim); }
+  .pill-small.warn{ color:var(--pink); border-color:var(--pink-dim); }
+  .empty-log{ font-family:var(--mono); font-size:12px; color:var(--text-dim); padding:30px 4px; text-align:center; }
+
+  footer{
+    margin-top:56px; font-family:var(--mono); font-size:10.5px; color:#3f5a48;
+    text-align:center; letter-spacing:.03em;
+  }
+
+  @media (max-width:640px){
+    h1{ font-size:38px; }
+    .header-row{ flex-direction:column; }
+    .callout{ max-width:none; width:100%; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .mic-btn.recording{ animation:none; }
+    .answer-card.show{ animation:none; }
+  }
 </style>
 </head>
 <body>
 
-  <div class="eyebrow">voice → retrieve → ground</div>
-  <h1>Signal Console</h1>
-  <p class="sub">Hold the mic, ask about returns, orders, or warranty. Every reply below is traced end to end, stage by stage.</p>
+  <div class="wrap">
 
-  <div class="mic-wrap">
-    <button class="mic-btn" id="micBtn" aria-label="Record question">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
-        <path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
-        <path d="M19 10v1a7 7 0 0 1-14 0v-1"/>
-        <path d="M12 18v4M9 22h6"/>
-      </svg>
-    </button>
-    <div class="status" id="status">tap to ask</div>
+    <div class="header-row">
+      <div>
+        <div class="eyebrow">Task 02 · voice → retrieve → ground · #RAGInGoa</div>
+        <h1>Speak the<br><em>question.</em></h1>
+        <p class="sub">Hold the mic and ask about returns, orders, or warranty. Every reply below is traced end to end, stage by stage, before it's allowed to speak.</p>
+        <div class="status-pill"><span class="dot"></span> guardrails armed</div>
+      </div>
+      <div class="callout">
+        <b>Full pipeline, one budget.</b> Retrieval — embed, search, fuse, rerank — has to clear before generation starts.
+        <div class="stat"><span class="num">200ms</span><span class="lbl">retrieval budget</span></div>
+      </div>
+    </div>
+
+    <div class="session-bar" style="margin-bottom:0;">
+      <div class="label">session</div>
+      <div class="count" id="sessionCount">0 queries logged</div>
+      <button class="btn ghost" id="newSessionBtn">+ new session</button>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" id="tabLive">Live Query</button>
+      <button class="tab" id="tabLog">Session Log</button>
+    </div>
+
+    <div class="panel" id="panelLive">
+      <div class="mic-wrap">
+        <button class="mic-btn" id="micBtn" aria-label="Record question">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+            <path d="M19 10v1a7 7 0 0 1-14 0v-1"/>
+            <path d="M12 18v4M9 22h6"/>
+          </svg>
+        </button>
+        <div class="status" id="status">tap to ask</div>
+      </div>
+
+      <div class="answer-card" id="answerCard">
+        <div class="q" id="queryText"></div>
+        <div class="a" id="answerText"></div>
+        <div class="flags" id="flags"></div>
+      </div>
+
+      <div class="path" id="path">
+        <div class="path-title">Tide line — latency by stage</div>
+        <div class="track" id="track"></div>
+        <div class="legend" id="legend"></div>
+        <div class="budget-note" id="budgetNote"></div>
+      </div>
+    </div>
+
+    <div class="panel" id="panelLog" style="display:none;">
+      <div class="log-head">
+        <h2>Session log</h2>
+        <button class="btn ghost" id="exportBtn">Export JSON</button>
+      </div>
+      <div id="logBody"></div>
+    </div>
+
   </div>
 
-  <div class="answer-card" id="answerCard">
-    <div class="q" id="queryText"></div>
-    <div class="a" id="answerText"></div>
-    <div class="flags" id="flags"></div>
-  </div>
-
-  <div class="path" id="path">
-    <div class="path-title">SIGNAL PATH — latency by stage</div>
-    <div class="track" id="track"></div>
-    <div class="legend" id="legend"></div>
-    <div class="budget-note" id="budgetNote"></div>
-  </div>
-
-  <footer>FAISS + BM25, in-process · retrieval budget 200ms · elevenlabs stt</footer>
+  <footer>FAISS + BM25, in-process · retrieval budget 200ms · elevenlabs stt · HH GOA 2026</footer>
 
 <script>
 const micBtn = document.getElementById('micBtn');
@@ -154,7 +311,17 @@ const trackEl = document.getElementById('track');
 const legendEl = document.getElementById('legend');
 const budgetNote = document.getElementById('budgetNote');
 
+const tabLive = document.getElementById('tabLive');
+const tabLog = document.getElementById('tabLog');
+const panelLive = document.getElementById('panelLive');
+const panelLog = document.getElementById('panelLog');
+const logBody = document.getElementById('logBody');
+const sessionCount = document.getElementById('sessionCount');
+const newSessionBtn = document.getElementById('newSessionBtn');
+const exportBtn = document.getElementById('exportBtn');
+
 let mediaRecorder, chunks = [], recording = false;
+let sessionLog = [];
 
 // Which timing keys count toward the <200ms retrieval budget vs network legs
 const RETRIEVAL_KEYS = ['query_embed_ms','retrieval.embed_ms','retrieval.search_ms','retrieval.fuse_ms','retrieval.rerank_ms','cache_lookup_ms'];
@@ -172,6 +339,37 @@ const STAGE_LABELS = {
   output_guardrail_ms: 'ground-check',
 };
 
+// ---- tabs ----
+tabLive.addEventListener('click', () => switchTab('live'));
+tabLog.addEventListener('click', () => switchTab('log'));
+function switchTab(which){
+  const isLive = which === 'live';
+  tabLive.classList.toggle('active', isLive);
+  tabLog.classList.toggle('active', !isLive);
+  panelLive.style.display = isLive ? '' : 'none';
+  panelLog.style.display = isLive ? 'none' : '';
+  if (!isLive) renderLog();
+}
+
+// ---- session reset ----
+newSessionBtn.addEventListener('click', () => {
+  sessionLog = [];
+  sessionCount.textContent = '0 queries logged';
+  answerCard.classList.remove('show');
+  pathEl.classList.remove('show');
+  statusEl.textContent = 'tap to ask';
+  renderLog();
+});
+
+exportBtn.addEventListener('click', () => {
+  const blob = new Blob([JSON.stringify(sessionLog, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'hhgoa-session-log.json'; a.click();
+  URL.revokeObjectURL(url);
+});
+
+// ---- mic recording ----
 micBtn.addEventListener('click', async () => {
   if (!recording) {
     try {
@@ -230,7 +428,17 @@ function renderResult(data) {
   }
   if (data.on_topic === false) addFlag('off-topic query', false);
 
-  renderPath(data.timings_ms || {});
+  const retrievalMs = renderPath(data.timings_ms || {});
+
+  sessionLog.unshift({
+    time: new Date().toLocaleTimeString(),
+    query: data.query_text || '(no transcript)',
+    grounded: data.groundedness ? data.groundedness.overall_grounded : null,
+    cacheHit: !!data.cache_hit,
+    retrievalMs: retrievalMs,
+    timings: data.timings_ms || {}
+  });
+  sessionCount.textContent = `${sessionLog.length} ${sessionLog.length === 1 ? 'query' : 'queries'} logged`;
 }
 
 function addFlag(label, ok) {
@@ -248,7 +456,7 @@ function renderPath(timings) {
     .filter(([key]) => timings[key] !== undefined)
     .map(([key, label]) => [label, timings[key], key]);
 
-  if (entries.length === 0) { pathEl.classList.remove('show'); return; }
+  if (entries.length === 0) { pathEl.classList.remove('show'); return 0; }
   pathEl.classList.add('show');
 
   const total = entries.reduce((s, [, ms]) => s + ms, 0) || 1;
@@ -269,7 +477,46 @@ function renderPath(timings) {
   });
 
   const overBudget = retrievalMs > RETRIEVAL_BUDGET_MS;
-  budgetNote.innerHTML = `retrieval leg: <b style="color:${overBudget ? 'var(--warn)' : 'var(--signal)'}">${retrievalMs.toFixed(1)}ms</b> / ${RETRIEVAL_BUDGET_MS}ms budget`;
+  if (overBudget) {
+    // mark the retrieval segments as "hot" (over budget) on the tide line
+    let idx = 0;
+    trackEl.querySelectorAll('.seg').forEach((seg) => {
+      const key = entries[idx][2];
+      if (RETRIEVAL_KEYS.includes(key)) seg.classList.add('hot');
+      idx++;
+    });
+  }
+  budgetNote.innerHTML = `retrieval leg: <b style="color:${overBudget ? 'var(--pink)' : 'var(--gold)'}">${retrievalMs.toFixed(1)}ms</b> / ${RETRIEVAL_BUDGET_MS}ms budget`;
+
+  return retrievalMs;
+}
+
+function renderLog(){
+  if (sessionLog.length === 0) {
+    logBody.innerHTML = '<div class="empty-log">No queries yet — ask something on the Live Query tab.</div>';
+    return;
+  }
+  let rows = sessionLog.map(entry => `
+    <tr>
+      <td style="font-family:var(--mono); font-size:11.5px; color:var(--text-dim); white-space:nowrap;">${entry.time}</td>
+      <td>${escapeHtml(entry.query)}</td>
+      <td><span class="pill-small ${entry.cacheHit ? 'ok' : ''}">${entry.cacheHit ? 'cache hit' : 'cache miss'}</span></td>
+      <td><span class="pill-small ${entry.grounded ? 'ok' : (entry.grounded === false ? 'warn' : '')}">${entry.grounded === null ? '—' : (entry.grounded ? 'grounded' : 'ungrounded')}</span></td>
+      <td style="font-family:var(--mono); font-size:12px;">${entry.retrievalMs.toFixed(1)}ms</td>
+    </tr>
+  `).join('');
+  logBody.innerHTML = `
+    <table class="log">
+      <thead><tr><th>Time</th><th>Query</th><th>Cache</th><th>Grounding</th><th>Retrieval</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+  `;
+}
+
+function escapeHtml(str){
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
 }
 </script>
 </body>
