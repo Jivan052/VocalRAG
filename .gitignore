@@ -13,6 +13,3 @@ __pycache__/
 # Local tooling and OS files
 .DS_Store
 .vscode/
-
-# Generated retrieval index artifacts
-index/bm25.pkl
