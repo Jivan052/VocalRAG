@@ -48,7 +48,7 @@ pipeline runs end to end immediately.
 ## 4. Run the server
 
 ```bash
-uvicorn app.server:app --reload --port 8000
+uvicorn app.server:app --reload --host 127.0.0.1 --port 8000
 ```
 
 Open http://localhost:8000 — tap the mic, ask a question, watch the signal
@@ -59,6 +59,13 @@ Or test without a mic:
 curl -X POST localhost:8000/api/text-query -H 'Content-Type: application/json' \
   -d '{"query": "how long do I have to return something"}'
 ```
+
+### Deploy on Render
+
+The included `render.yaml`, `Procfile`, and `runtime.txt` configure the web
+service to bind to Render's `$PORT` and use Python 3.12. Add
+`OPENROUTER_API_KEY` and `ELEVENLABS_API_KEY` as secret environment variables
+in the Render dashboard, then deploy the repository.
 
 ## Swapping in MSMARCO-XI (or any real corpus)
 

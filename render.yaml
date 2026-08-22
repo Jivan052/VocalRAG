@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: voice-rag
+    runtime: python
+    buildCommand: pip install -r requirements.txt && python build_index.py
+    startCommand: uvicorn app.server:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: ELEVENLABS_API_KEY
+        sync: false
+      - key: OPENROUTER_MODEL
+        value: google/gemini-2.5-flash-lite
+      - key: GENERATION_PROVIDER
+        value: openrouter
