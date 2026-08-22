@@ -1,0 +1,1277 @@
+[
+  {
+    "id": "1000001",
+    "title": "Indian States and Capitals",
+    "text": "Regarding the question 'what is the capital of Andhra Pradesh?': The capital of Andhra Pradesh is Amaravati."
+  },
+  {
+    "id": "1000002",
+    "title": "Indian States and Capitals",
+    "text": "Regarding the question 'what is the capital of Arunachal Pradesh?': The capital of Arunachal Pradesh is Itanagar."
+  },
+  {
+    "id": "1000003",
+    "title": "Indian States and Capitals",
+    "text": "Regarding the question 'what is the capital of Assam?': The capital of Assam is Dispur."
+  },
+  {
+    "id": "1000004",
+    "title": "Indian States and Capitals",
+    "text": "Regarding the question 'what is the capital of Bihar?': The capital of Bihar is Patna."
+  },
+  {
+    "id": "1000005",
+    "title": "Indian States and Capitals",
+    "text": "Regarding the question 'what is the capital of Chhattisgarh?': The capital of Chhattisgarh is Raipur."
+  },
+  {
+    "id": "1000006",
+    "title": "Indian States and Capitals",
+    "text": "Regarding the question 'what is the capital of Goa?': The capital of Goa is Panaji."
+  },
+  {
+    "id": "1000007",
+    "title": "Indian States and Capitals",
+    "text": "Regarding the question 'what is the capital of Gujarat?': The capital of Gujarat is Gandhinagar."
+  },
+  {
+    "id": "1000008",
+    "title": "Indian States and Capitals",
+    "text": "Regarding the question 'what is the capital of Haryana?': The capital of Haryana is Chandigarh."
+  },
+  {
+    "id": "1000009",
+    "title": "Indian States and Capitals",
+    "text": "Regarding the question 'what is the capital of Himachal Pradesh?': The capital of Himachal Pradesh is Shimla."
+  },
+  {
+    "id": "1000010",
+    "title": "Indian States and Capitals",
+    "text": "Regarding the question 'what is the capital of Jharkhand?': The capital of Jharkhand is Ranchi."
+  },
+  {
+    "id": "1000011",
+    "title": "Indian States and Capitals",
+    "text": "Regarding the question 'what is the capital of Karnataka?': The capital of Karnataka is Bengaluru."
+  },
+  {
+    "id": "1000012",
+    "title": "Indian States and Capitals",
+    "text": "Regarding the question 'what is the capital of Kerala?': The capital of Kerala is Thiruvananthapuram."
+  },
+  {
+    "id": "1000013",
+    "title": "Indian States and Capitals",
+    "text": "Regarding the question 'what is the capital of Madhya Pradesh?': The capital of Madhya Pradesh is Bhopal."
+  },
+  {
+    "id": "1000014",
+    "title": "Indian States and Capitals",
+    "text": "Regarding the question 'what is the capital of Maharashtra?': The capital of Maharashtra is Mumbai."
+  },
+  {
+    "id": "1000015",
+    "title": "Indian States and Capitals",
+    "text": "Regarding the question 'what is the capital of Manipur?': The capital of Manipur is Imphal."
+  },
+  {
+    "id": "1000016",
+    "title": "Indian States and Capitals",
+    "text": "Regarding the question 'what is the capital of Meghalaya?': The capital of Meghalaya is Shillong."
+  },
+  {
+    "id": "1000017",
+    "title": "Indian States and Capitals",
+    "text": "Regarding the question 'what is the capital of Mizoram?': The capital of Mizoram is Aizawl."
+  },
+  {
+    "id": "1000018",
+    "title": "Indian States and Capitals",
+    "text": "Regarding the question 'what is the capital of Nagaland?': The capital of Nagaland is Kohima."
+  },
+  {
+    "id": "1000019",
+    "title": "Indian States and Capitals",
+    "text": "Regarding the question 'what is the capital of Odisha?': The capital of Odisha is Bhubaneswar."
+  },
+  {
+    "id": "1000020",
+    "title": "Indian States and Capitals",
+    "text": "Regarding the question 'what is the capital of Punjab?': The capital of Punjab is Chandigarh."
+  },
+  {
+    "id": "1000021",
+    "title": "Indian States and Capitals",
+    "text": "Regarding the question 'what is the capital of Rajasthan?': The capital of Rajasthan is Jaipur."
+  },
+  {
+    "id": "1000022",
+    "title": "Indian States and Capitals",
+    "text": "Regarding the question 'what is the capital of Sikkim?': The capital of Sikkim is Gangtok."
+  },
+  {
+    "id": "1000023",
+    "title": "Indian States and Capitals",
+    "text": "Regarding the question 'what is the capital of Tamil Nadu?': The capital of Tamil Nadu is Chennai."
+  },
+  {
+    "id": "1000024",
+    "title": "Indian States and Capitals",
+    "text": "Regarding the question 'what is the capital of Telangana?': The capital of Telangana is Hyderabad."
+  },
+  {
+    "id": "1000025",
+    "title": "Indian States and Capitals",
+    "text": "Regarding the question 'what is the capital of Tripura?': The capital of Tripura is Agartala."
+  },
+  {
+    "id": "1000026",
+    "title": "Indian States and Capitals",
+    "text": "Regarding the question 'what is the capital of Uttar Pradesh?': The capital of Uttar Pradesh is Lucknow."
+  },
+  {
+    "id": "1000027",
+    "title": "Indian States and Capitals",
+    "text": "Regarding the question 'what is the capital of Uttarakhand?': The capital of Uttarakhand is Dehradun."
+  },
+  {
+    "id": "1000028",
+    "title": "Indian States and Capitals",
+    "text": "Regarding the question 'what is the capital of West Bengal?': The capital of West Bengal is Kolkata."
+  },
+  {
+    "id": "1000029",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of France?': The capital city of France is Paris."
+  },
+  {
+    "id": "1000030",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of Germany?': The capital city of Germany is Berlin."
+  },
+  {
+    "id": "1000031",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of Japan?': The capital city of Japan is Tokyo."
+  },
+  {
+    "id": "1000032",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of Canada?': The capital city of Canada is Ottawa."
+  },
+  {
+    "id": "1000033",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of Australia?': The capital city of Australia is Canberra."
+  },
+  {
+    "id": "1000034",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of Brazil?': The capital city of Brazil is Brasilia."
+  },
+  {
+    "id": "1000035",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of Russia?': The capital city of Russia is Moscow."
+  },
+  {
+    "id": "1000036",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of China?': The capital city of China is Beijing."
+  },
+  {
+    "id": "1000037",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of Egypt?': The capital city of Egypt is Cairo."
+  },
+  {
+    "id": "1000038",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of Italy?': The capital city of Italy is Rome."
+  },
+  {
+    "id": "1000039",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of Spain?': The capital city of Spain is Madrid."
+  },
+  {
+    "id": "1000040",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of Nepal?': The capital city of Nepal is Kathmandu."
+  },
+  {
+    "id": "1000041",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of Bangladesh?': The capital city of Bangladesh is Dhaka."
+  },
+  {
+    "id": "1000042",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of Sri Lanka?': The capital city of Sri Lanka is Sri Jayawardenepura Kotte."
+  },
+  {
+    "id": "1000043",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of Pakistan?': The capital city of Pakistan is Islamabad."
+  },
+  {
+    "id": "1000044",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of Bhutan?': The capital city of Bhutan is Thimphu."
+  },
+  {
+    "id": "1000045",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of South Korea?': The capital city of South Korea is Seoul."
+  },
+  {
+    "id": "1000046",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of Mexico?': The capital city of Mexico is Mexico City."
+  },
+  {
+    "id": "1000047",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of South Africa?': The capital city of South Africa is Pretoria."
+  },
+  {
+    "id": "1000048",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of Indonesia?': The capital city of Indonesia is Jakarta."
+  },
+  {
+    "id": "1000049",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of Turkey?': The capital city of Turkey is Ankara."
+  },
+  {
+    "id": "1000050",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of Argentina?': The capital city of Argentina is Buenos Aires."
+  },
+  {
+    "id": "1000051",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of Thailand?': The capital city of Thailand is Bangkok."
+  },
+  {
+    "id": "1000052",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of Vietnam?': The capital city of Vietnam is Hanoi."
+  },
+  {
+    "id": "1000053",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of Saudi Arabia?': The capital city of Saudi Arabia is Riyadh."
+  },
+  {
+    "id": "1000054",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of United Kingdom?': The capital city of United Kingdom is London."
+  },
+  {
+    "id": "1000055",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of United States?': The capital city of United States is Washington, D.C.."
+  },
+  {
+    "id": "1000056",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of Kenya?': The capital city of Kenya is Nairobi."
+  },
+  {
+    "id": "1000057",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of Nigeria?': The capital city of Nigeria is Abuja."
+  },
+  {
+    "id": "1000058",
+    "title": "World Capitals",
+    "text": "Regarding the question 'what is the capital city of Greece?': The capital city of Greece is Athens."
+  },
+  {
+    "id": "1000059",
+    "title": "Rivers of India",
+    "text": "Regarding the question 'where does the Ganga river originate?': The Ganga originates from the Gangotri Glacier in the Himalayas and flows through northern India into Bangladesh, where it merges with the Brahmaputra."
+  },
+  {
+    "id": "1000060",
+    "title": "Rivers of India",
+    "text": "Regarding the question 'where does the Yamuna river originate?': The Yamuna is the largest tributary of the Ganga and originates from the Yamunotri Glacier in Uttarakhand."
+  },
+  {
+    "id": "1000061",
+    "title": "Rivers of India",
+    "text": "Regarding the question 'where does the Brahmaputra river originate?': The Brahmaputra originates in Tibet and flows through Arunachal Pradesh and Assam before entering Bangladesh."
+  },
+  {
+    "id": "1000062",
+    "title": "Rivers of India",
+    "text": "Regarding the question 'where does the Godavari river originate?': The Godavari, sometimes called the Dakshin Ganga, originates in Maharashtra and flows across the Deccan Plateau."
+  },
+  {
+    "id": "1000063",
+    "title": "Rivers of India",
+    "text": "Regarding the question 'where does the Krishna river originate?': The Krishna river originates near Mahabaleshwar in Maharashtra and flows through Karnataka, Telangana, and Andhra Pradesh."
+  },
+  {
+    "id": "1000064",
+    "title": "Rivers of India",
+    "text": "Regarding the question 'where does the Narmada river originate?': The Narmada originates from Amarkantak in Madhya Pradesh and flows westward into the Arabian Sea."
+  },
+  {
+    "id": "1000065",
+    "title": "Rivers of India",
+    "text": "Regarding the question 'where does the Kaveri river originate?': The Kaveri originates in Karnataka's Western Ghats and flows through Tamil Nadu into the Bay of Bengal."
+  },
+  {
+    "id": "1000066",
+    "title": "Rivers of India",
+    "text": "Regarding the question 'where does the Indus river originate?': The Indus originates in Tibet and flows through Ladakh and Pakistan into the Arabian Sea."
+  },
+  {
+    "id": "1000067",
+    "title": "Science Facts",
+    "text": "Regarding the question 'what is photosynthesis?': Photosynthesis is the process by which green plants use sunlight, water, and carbon dioxide to produce glucose and release oxygen."
+  },
+  {
+    "id": "1000068",
+    "title": "Science Facts",
+    "text": "Regarding the question 'what is the chemical formula of water?': The chemical formula of water is H2O, meaning each molecule has two hydrogen atoms bonded to one oxygen atom."
+  },
+  {
+    "id": "1000069",
+    "title": "Science Facts",
+    "text": "Regarding the question 'what is the boiling point of water at sea level?': Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard atmospheric pressure at sea level."
+  },
+  {
+    "id": "1000070",
+    "title": "Science Facts",
+    "text": "Regarding the question 'what is gravity?': Gravity is the force that attracts objects with mass toward one another, and on Earth it pulls objects toward the planet's center."
+  },
+  {
+    "id": "1000071",
+    "title": "Science Facts",
+    "text": "Regarding the question 'what is the speed of light?': The speed of light in a vacuum is approximately 299,792 kilometers per second."
+  },
+  {
+    "id": "1000072",
+    "title": "Science Facts",
+    "text": "Regarding the question 'what are the three states of matter?': The three common states of matter are solid, liquid, and gas, distinguished by how tightly their particles are packed."
+  },
+  {
+    "id": "1000073",
+    "title": "Science Facts",
+    "text": "Regarding the question 'what is DNA?': DNA, or deoxyribonucleic acid, is the molecule that carries the genetic instructions used in the growth, development, and reproduction of living organisms."
+  },
+  {
+    "id": "1000074",
+    "title": "Science Facts",
+    "text": "Regarding the question 'what is the powerhouse of the cell?': The mitochondrion is often called the powerhouse of the cell because it generates most of the cell's energy in the form of ATP."
+  },
+  {
+    "id": "1000075",
+    "title": "Science Facts",
+    "text": "Regarding the question 'what causes rainbows?': Rainbows form when sunlight is refracted, reflected, and dispersed inside water droplets, splitting light into its constituent colors."
+  },
+  {
+    "id": "1000076",
+    "title": "Science Facts",
+    "text": "Regarding the question 'what is an ecosystem?': An ecosystem is a community of living organisms interacting with each other and their physical environment."
+  },
+  {
+    "id": "1000077",
+    "title": "Science Facts",
+    "text": "Regarding the question 'what is Newton's first law of motion?': Newton's first law states that an object at rest stays at rest and an object in motion stays in motion unless acted upon by an external force."
+  },
+  {
+    "id": "1000078",
+    "title": "Science Facts",
+    "text": "Regarding the question 'what is the periodic table?': The periodic table is a tabular arrangement of chemical elements organized by atomic number, electron configuration, and recurring chemical properties."
+  },
+  {
+    "id": "1000079",
+    "title": "Science Facts",
+    "text": "Regarding the question 'what is an atom made of?': An atom is made up of a nucleus containing protons and neutrons, surrounded by electrons orbiting in shells."
+  },
+  {
+    "id": "1000080",
+    "title": "Science Facts",
+    "text": "Regarding the question 'what is evaporation?': Evaporation is the process by which a liquid turns into vapor, typically occurring at the surface of the liquid below its boiling point."
+  },
+  {
+    "id": "1000081",
+    "title": "Science Facts",
+    "text": "Regarding the question 'what is the human body's largest organ?': The skin is the largest organ of the human body, serving as a protective barrier against the environment."
+  },
+  {
+    "id": "1000082",
+    "title": "Science Facts",
+    "text": "Regarding the question 'what is climate change?': Climate change refers to long-term shifts in temperatures and weather patterns, largely driven by human activities such as burning fossil fuels."
+  },
+  {
+    "id": "1000083",
+    "title": "Science Facts",
+    "text": "Regarding the question 'what is the greenhouse effect?': The greenhouse effect is the process by which gases in the atmosphere trap heat from the sun, warming the Earth's surface."
+  },
+  {
+    "id": "1000084",
+    "title": "Science Facts",
+    "text": "Regarding the question 'what is an antibiotic?': An antibiotic is a type of medicine that fights bacterial infections by killing bacteria or preventing their growth."
+  },
+  {
+    "id": "1000085",
+    "title": "Science Facts",
+    "text": "Regarding the question 'what is the function of red blood cells?': Red blood cells carry oxygen from the lungs to the rest of the body and transport carbon dioxide back to the lungs."
+  },
+  {
+    "id": "1000086",
+    "title": "Science Facts",
+    "text": "Regarding the question 'what is the theory of relativity?': The theory of relativity, developed by Albert Einstein, describes how space and time are linked for objects moving at a consistent speed in a straight line."
+  },
+  {
+    "id": "1000087",
+    "title": "History Facts",
+    "text": "Regarding the question 'when did india gain independence?': India gained independence from British rule on 15 August 1947."
+  },
+  {
+    "id": "1000088",
+    "title": "History Facts",
+    "text": "Regarding the question 'who was the first prime minister of india?': Jawaharlal Nehru was the first Prime Minister of independent India."
+  },
+  {
+    "id": "1000089",
+    "title": "History Facts",
+    "text": "Regarding the question 'when was the constitution of india adopted?': The Constitution of India was adopted on 26 November 1949 and came into effect on 26 January 1950."
+  },
+  {
+    "id": "1000090",
+    "title": "History Facts",
+    "text": "Regarding the question 'who founded the mughal empire?': Babur founded the Mughal Empire in India after his victory at the First Battle of Panipat in 1526."
+  },
+  {
+    "id": "1000091",
+    "title": "History Facts",
+    "text": "Regarding the question 'who built the taj mahal?': The Taj Mahal was built by Mughal emperor Shah Jahan in memory of his wife Mumtaz Mahal."
+  },
+  {
+    "id": "1000092",
+    "title": "History Facts",
+    "text": "Regarding the question 'what was the quit india movement?': The Quit India Movement was a civil disobedience movement launched by Mahatma Gandhi in August 1942, demanding an end to British rule in India."
+  },
+  {
+    "id": "1000093",
+    "title": "History Facts",
+    "text": "Regarding the question 'who was ashoka?': Ashoka was a Mauryan emperor who ruled most of the Indian subcontinent and later embraced Buddhism after the Kalinga war."
+  },
+  {
+    "id": "1000094",
+    "title": "History Facts",
+    "text": "Regarding the question 'when did world war ii end?': World War II ended in 1945, with Germany surrendering in May and Japan surrendering in September."
+  },
+  {
+    "id": "1000095",
+    "title": "History Facts",
+    "text": "Regarding the question 'who was the first president of india?': Rajendra Prasad was the first President of India, serving from 1950 to 1962."
+  },
+  {
+    "id": "1000096",
+    "title": "History Facts",
+    "text": "Regarding the question 'what was the salt march?': The Salt March, also known as the Dandi March, was a nonviolent protest led by Mahatma Gandhi in 1930 against the British salt tax."
+  },
+  {
+    "id": "1000097",
+    "title": "History Facts",
+    "text": "Regarding the question 'who discovered the sea route to india?': Vasco da Gama, a Portuguese explorer, discovered the sea route to India in 1498, landing at Calicut."
+  },
+  {
+    "id": "1000098",
+    "title": "History Facts",
+    "text": "Regarding the question 'when was the east india company established?': The East India Company was established in 1600 as an English trading company that later expanded its influence across India."
+  },
+  {
+    "id": "1000099",
+    "title": "History Facts",
+    "text": "Regarding the question 'who wrote the indian national anthem?': Rabindranath Tagore wrote 'Jana Gana Mana', which was adopted as the national anthem of India."
+  },
+  {
+    "id": "1000100",
+    "title": "History Facts",
+    "text": "Regarding the question 'what caused the french revolution?': The French Revolution was caused by widespread economic hardship, social inequality, and dissatisfaction with the monarchy in the late 18th century."
+  },
+  {
+    "id": "1000101",
+    "title": "History Facts",
+    "text": "Regarding the question 'who was akbar?': Akbar was a Mughal emperor known for his military conquests, administrative reforms, and policy of religious tolerance."
+  },
+  {
+    "id": "1000102",
+    "title": "Technology",
+    "text": "Regarding the question 'what is artificial intelligence?': Artificial intelligence refers to computer systems designed to perform tasks that typically require human intelligence, such as reasoning and learning."
+  },
+  {
+    "id": "1000103",
+    "title": "Technology",
+    "text": "Regarding the question 'what is cloud computing?': Cloud computing is the delivery of computing services like storage, servers, and software over the internet instead of local hardware."
+  },
+  {
+    "id": "1000104",
+    "title": "Technology",
+    "text": "Regarding the question 'what is machine learning?': Machine learning is a subset of artificial intelligence where systems learn patterns from data to make predictions or decisions without explicit programming."
+  },
+  {
+    "id": "1000105",
+    "title": "Technology",
+    "text": "Regarding the question 'what is a firewall in networking?': A firewall is a network security device that monitors and controls incoming and outgoing traffic based on predefined security rules."
+  },
+  {
+    "id": "1000106",
+    "title": "Technology",
+    "text": "Regarding the question 'what is an operating system?': An operating system is software that manages computer hardware and provides services for running application programs."
+  },
+  {
+    "id": "1000107",
+    "title": "Technology",
+    "text": "Regarding the question 'what is encryption?': Encryption is the process of converting information into a coded form to prevent unauthorized access."
+  },
+  {
+    "id": "1000108",
+    "title": "Technology",
+    "text": "Regarding the question 'what is the internet of things?': The Internet of Things refers to the network of physical devices embedded with sensors and software that connect and exchange data over the internet."
+  },
+  {
+    "id": "1000109",
+    "title": "Technology",
+    "text": "Regarding the question 'what is open source software?': Open source software is software whose source code is made publicly available for anyone to view, modify, and distribute."
+  },
+  {
+    "id": "1000110",
+    "title": "Technology",
+    "text": "Regarding the question 'what is a database?': A database is an organized collection of structured data stored electronically and managed by a database management system."
+  },
+  {
+    "id": "1000111",
+    "title": "Technology",
+    "text": "Regarding the question 'what is UPI in india?': UPI, or Unified Payments Interface, is a real-time payment system in India that allows instant money transfers between bank accounts using a mobile device."
+  },
+  {
+    "id": "1000112",
+    "title": "Health and Nutrition",
+    "text": "Regarding the question 'how much water should an adult drink daily?': Health guidelines commonly suggest around 2 to 3 liters of water per day for adults, though needs vary by body size and activity level."
+  },
+  {
+    "id": "1000113",
+    "title": "Health and Nutrition",
+    "text": "Regarding the question 'what vitamins does sunlight help the body produce?': Sunlight exposure helps the human body synthesize vitamin D, which supports bone health and immune function."
+  },
+  {
+    "id": "1000114",
+    "title": "Health and Nutrition",
+    "text": "Regarding the question 'what are symptoms of dehydration?': Common symptoms of dehydration include thirst, dry mouth, fatigue, dizziness, and dark-colored urine."
+  },
+  {
+    "id": "1000115",
+    "title": "Health and Nutrition",
+    "text": "Regarding the question 'what is a balanced diet?': A balanced diet includes appropriate proportions of carbohydrates, proteins, fats, vitamins, minerals, and fiber to meet the body's nutritional needs."
+  },
+  {
+    "id": "1000116",
+    "title": "Health and Nutrition",
+    "text": "Regarding the question 'what causes the common cold?': The common cold is usually caused by viral infections, most often rhinoviruses, which spread through droplets or contaminated surfaces."
+  },
+  {
+    "id": "1000117",
+    "title": "Health and Nutrition",
+    "text": "Regarding the question 'why is exercise important?': Regular exercise helps maintain a healthy weight, strengthens the heart and muscles, and improves mental well-being."
+  },
+  {
+    "id": "1000118",
+    "title": "Health and Nutrition",
+    "text": "Regarding the question 'what is blood pressure?': Blood pressure is the force exerted by circulating blood against the walls of the arteries, measured in millimeters of mercury."
+  },
+  {
+    "id": "1000119",
+    "title": "Health and Nutrition",
+    "text": "Regarding the question 'what foods are high in protein?': Foods high in protein include lentils, eggs, chicken, fish, dairy products, and legumes such as chickpeas."
+  },
+  {
+    "id": "1000120",
+    "title": "Health and Nutrition",
+    "text": "Regarding the question 'what is the recommended amount of sleep for adults?': Most health guidelines recommend 7 to 9 hours of sleep per night for adults."
+  },
+  {
+    "id": "1000121",
+    "title": "Health and Nutrition",
+    "text": "Regarding the question 'what is diabetes?': Diabetes is a chronic condition in which the body cannot properly regulate blood sugar levels, either due to insufficient insulin production or insulin resistance."
+  },
+  {
+    "id": "1000122",
+    "title": "Geography",
+    "text": "Regarding the question 'what is the tallest mountain in the world?': Mount Everest, located in the Himalayas on the border of Nepal and Tibet, is the tallest mountain above sea level at 8,849 meters."
+  },
+  {
+    "id": "1000123",
+    "title": "Geography",
+    "text": "Regarding the question 'what is the longest river in the world?': The Nile River in Africa is generally considered the longest river in the world, stretching about 6,650 kilometers."
+  },
+  {
+    "id": "1000124",
+    "title": "Geography",
+    "text": "Regarding the question 'what is the largest desert in the world?': The Antarctic Desert is the largest desert in the world by area, followed by the Sahara Desert as the largest hot desert."
+  },
+  {
+    "id": "1000125",
+    "title": "Geography",
+    "text": "Regarding the question 'which is the largest ocean?': The Pacific Ocean is the largest and deepest ocean, covering more area than all the continents combined."
+  },
+  {
+    "id": "1000126",
+    "title": "Geography",
+    "text": "Regarding the question 'what is the smallest country in the world?': Vatican City is the smallest country in the world by both area and population."
+  },
+  {
+    "id": "1000127",
+    "title": "Geography",
+    "text": "Regarding the question 'which is the largest state in india by area?': Rajasthan is the largest Indian state by geographical area."
+  },
+  {
+    "id": "1000128",
+    "title": "Geography",
+    "text": "Regarding the question 'which indian state has the longest coastline?': Gujarat has the longest coastline among Indian states, stretching over 1,600 kilometers."
+  },
+  {
+    "id": "1000129",
+    "title": "Geography",
+    "text": "Regarding the question 'what is the highest peak in india?': Kangchenjunga, located on the border of Sikkim and Nepal, is the highest peak in India."
+  },
+  {
+    "id": "1000130",
+    "title": "Geography",
+    "text": "Regarding the question 'which is the largest island in india?': Majuli, located in the Brahmaputra river in Assam, is often cited as the largest river island in India."
+  },
+  {
+    "id": "1000131",
+    "title": "Geography",
+    "text": "Regarding the question 'what is a monsoon?': A monsoon is a seasonal wind pattern that brings heavy rainfall to regions such as the Indian subcontinent, typically between June and September."
+  },
+  {
+    "id": "1000132",
+    "title": "Sports",
+    "text": "Regarding the question 'how many players are there in a cricket team?': A cricket team consists of 11 players on the field at a time."
+  },
+  {
+    "id": "1000133",
+    "title": "Sports",
+    "text": "Regarding the question 'who won the icc cricket world cup in 2011?': India won the ICC Cricket World Cup in 2011, defeating Sri Lanka in the final held in Mumbai."
+  },
+  {
+    "id": "1000134",
+    "title": "Sports",
+    "text": "Regarding the question 'what is the national sport of india?': India does not officially have a declared national sport; hockey is often popularly regarded as the country's national sport due to historical achievements."
+  },
+  {
+    "id": "1000135",
+    "title": "Sports",
+    "text": "Regarding the question 'how many players are on a football team?': A football (soccer) team fields 11 players, including one goalkeeper, during a match."
+  },
+  {
+    "id": "1000136",
+    "title": "Sports",
+    "text": "Regarding the question 'what is the duration of a standard football match?': A standard football match lasts 90 minutes, divided into two 45-minute halves."
+  },
+  {
+    "id": "1000137",
+    "title": "Sports",
+    "text": "Regarding the question 'where were the 2020 olympics held?': The 2020 Summer Olympics were held in Tokyo, Japan, though they took place in 2021 due to the COVID-19 pandemic."
+  },
+  {
+    "id": "1000138",
+    "title": "Sports",
+    "text": "Regarding the question 'what is the highest individual score in test cricket?': Brian Lara holds the record for the highest individual score in Test cricket, with 400 not out against England in 2004."
+  },
+  {
+    "id": "1000139",
+    "title": "Sports",
+    "text": "Regarding the question 'how many rings are on the olympic flag?': The Olympic flag has five interlocking rings, representing the five inhabited continents."
+  },
+  {
+    "id": "1000140",
+    "title": "Culture and Festivals",
+    "text": "Regarding the question 'what is diwali?': Diwali, the festival of lights, is a major Hindu festival celebrating the victory of light over darkness and good over evil."
+  },
+  {
+    "id": "1000141",
+    "title": "Culture and Festivals",
+    "text": "Regarding the question 'what is holi?': Holi is a Hindu spring festival celebrated by throwing colored powders and water, symbolizing the arrival of spring and the triumph of good over evil."
+  },
+  {
+    "id": "1000142",
+    "title": "Culture and Festivals",
+    "text": "Regarding the question 'what is eid al-fitr?': Eid al-Fitr is an Islamic festival marking the end of Ramadan, the month of fasting."
+  },
+  {
+    "id": "1000143",
+    "title": "Culture and Festivals",
+    "text": "Regarding the question 'what is onam?': Onam is an annual harvest festival celebrated primarily in Kerala, marked by elaborate flower arrangements, boat races, and feasts."
+  },
+  {
+    "id": "1000144",
+    "title": "Culture and Festivals",
+    "text": "Regarding the question 'what is baisakhi?': Baisakhi is a harvest festival celebrated mainly in Punjab, also marking the founding of the Khalsa Panth in Sikhism."
+  },
+  {
+    "id": "1000145",
+    "title": "Culture and Festivals",
+    "text": "Regarding the question 'what is durga puja?': Durga Puja is a major festival, especially in West Bengal, celebrating the goddess Durga's victory over the demon Mahishasura."
+  },
+  {
+    "id": "1000146",
+    "title": "Culture and Festivals",
+    "text": "Regarding the question 'what is the significance of raksha bandhan?': Raksha Bandhan is a festival celebrating the bond between brothers and sisters, where sisters tie a protective thread called a rakhi on their brothers' wrists."
+  },
+  {
+    "id": "1000147",
+    "title": "Culture and Festivals",
+    "text": "Regarding the question 'what is pongal?': Pongal is a multi-day harvest festival celebrated mainly in Tamil Nadu, dedicated to thanking the Sun God for a good harvest."
+  },
+  {
+    "id": "1000148",
+    "title": "Currencies",
+    "text": "Regarding the question 'what is the currency of India?': The official currency of India is the Indian Rupee (INR)."
+  },
+  {
+    "id": "1000149",
+    "title": "Currencies",
+    "text": "Regarding the question 'what is the currency of United States?': The official currency of United States is the US Dollar (USD)."
+  },
+  {
+    "id": "1000150",
+    "title": "Currencies",
+    "text": "Regarding the question 'what is the currency of United Kingdom?': The official currency of United Kingdom is the British Pound (GBP)."
+  },
+  {
+    "id": "1000151",
+    "title": "Currencies",
+    "text": "Regarding the question 'what is the currency of Japan?': The official currency of Japan is the Japanese Yen (JPY)."
+  },
+  {
+    "id": "1000152",
+    "title": "Currencies",
+    "text": "Regarding the question 'what is the currency of China?': The official currency of China is the Chinese Yuan (CNY)."
+  },
+  {
+    "id": "1000153",
+    "title": "Currencies",
+    "text": "Regarding the question 'what is the currency of Germany?': The official currency of Germany is the Euro (EUR)."
+  },
+  {
+    "id": "1000154",
+    "title": "Currencies",
+    "text": "Regarding the question 'what is the currency of Nepal?': The official currency of Nepal is the Nepalese Rupee (NPR)."
+  },
+  {
+    "id": "1000155",
+    "title": "Currencies",
+    "text": "Regarding the question 'what is the currency of Sri Lanka?': The official currency of Sri Lanka is the Sri Lankan Rupee (LKR)."
+  },
+  {
+    "id": "1000156",
+    "title": "Currencies",
+    "text": "Regarding the question 'what is the currency of Bangladesh?': The official currency of Bangladesh is the Bangladeshi Taka (BDT)."
+  },
+  {
+    "id": "1000157",
+    "title": "Currencies",
+    "text": "Regarding the question 'what is the currency of Bhutan?': The official currency of Bhutan is the Bhutanese Ngultrum (BTN)."
+  },
+  {
+    "id": "1000158",
+    "title": "Currencies",
+    "text": "Regarding the question 'what is the currency of Brazil?': The official currency of Brazil is the Brazilian Real (BRL)."
+  },
+  {
+    "id": "1000159",
+    "title": "Currencies",
+    "text": "Regarding the question 'what is the currency of Russia?': The official currency of Russia is the Russian Ruble (RUB)."
+  },
+  {
+    "id": "1000160",
+    "title": "Currencies",
+    "text": "Regarding the question 'what is the currency of South Africa?': The official currency of South Africa is the South African Rand (ZAR)."
+  },
+  {
+    "id": "1000161",
+    "title": "Currencies",
+    "text": "Regarding the question 'what is the currency of Australia?': The official currency of Australia is the Australian Dollar (AUD)."
+  },
+  {
+    "id": "1000162",
+    "title": "Currencies",
+    "text": "Regarding the question 'what is the currency of Canada?': The official currency of Canada is the Canadian Dollar (CAD)."
+  },
+  {
+    "id": "1000163",
+    "title": "Measurement and Conversion",
+    "text": "Regarding the question 'how many centimeters are in a meter?': There are 100 centimeters in one meter."
+  },
+  {
+    "id": "1000164",
+    "title": "Measurement and Conversion",
+    "text": "Regarding the question 'how many grams are in a kilogram?': There are 1,000 grams in one kilogram."
+  },
+  {
+    "id": "1000165",
+    "title": "Measurement and Conversion",
+    "text": "Regarding the question 'how many milliliters are in a liter?': There are 1,000 milliliters in one liter."
+  },
+  {
+    "id": "1000166",
+    "title": "Measurement and Conversion",
+    "text": "Regarding the question 'how many days are in a leap year?': A leap year has 366 days, with an extra day added to February."
+  },
+  {
+    "id": "1000167",
+    "title": "Measurement and Conversion",
+    "text": "Regarding the question 'how many degrees are in a right angle?': A right angle measures exactly 90 degrees."
+  },
+  {
+    "id": "1000168",
+    "title": "Measurement and Conversion",
+    "text": "Regarding the question 'how many minutes are in a day?': There are 1,440 minutes in a day."
+  },
+  {
+    "id": "1000169",
+    "title": "Measurement and Conversion",
+    "text": "Regarding the question 'how many kilometers are in a mile?': One mile is approximately equal to 1.609 kilometers."
+  },
+  {
+    "id": "1000170",
+    "title": "Measurement and Conversion",
+    "text": "Regarding the question 'what is the freezing point of water in celsius?': Water freezes at 0 degrees Celsius under standard atmospheric pressure."
+  },
+  {
+    "id": "1000171",
+    "title": "Astronomy",
+    "text": "Regarding the question 'how many planets are in the solar system?': There are eight planets in the solar system: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune."
+  },
+  {
+    "id": "1000172",
+    "title": "Astronomy",
+    "text": "Regarding the question 'what is the largest planet in the solar system?': Jupiter is the largest planet in the solar system by both mass and volume."
+  },
+  {
+    "id": "1000173",
+    "title": "Astronomy",
+    "text": "Regarding the question 'what is a light year?': A light year is the distance that light travels in one year, roughly 9.46 trillion kilometers."
+  },
+  {
+    "id": "1000174",
+    "title": "Astronomy",
+    "text": "Regarding the question 'what is india's first mission to the moon called?': Chandrayaan-1 was India's first lunar exploration mission, launched by ISRO in 2008."
+  },
+  {
+    "id": "1000175",
+    "title": "Astronomy",
+    "text": "Regarding the question 'what is chandrayaan-3?': Chandrayaan-3 is an Indian Space Research Organisation mission that successfully landed near the Moon's south pole in August 2023."
+  },
+  {
+    "id": "1000176",
+    "title": "Astronomy",
+    "text": "Regarding the question 'what is a galaxy?': A galaxy is a massive system of stars, stellar remnants, interstellar gas, dust, and dark matter bound together by gravity."
+  },
+  {
+    "id": "1000177",
+    "title": "Astronomy",
+    "text": "Regarding the question 'what causes day and night?': Day and night are caused by the Earth's rotation on its axis, which alternately exposes different parts of the planet to sunlight."
+  },
+  {
+    "id": "1000178",
+    "title": "Astronomy",
+    "text": "Regarding the question 'what is the sun mostly made of?': The Sun is composed mostly of hydrogen and helium, which fuel nuclear fusion reactions at its core."
+  },
+  {
+    "id": "1000179",
+    "title": "Scientists and Inventors",
+    "text": "Regarding the question 'who discovered gravity?': Isaac Newton is credited with formulating the law of universal gravitation after observing a falling apple, according to popular accounts."
+  },
+  {
+    "id": "1000180",
+    "title": "Scientists and Inventors",
+    "text": "Regarding the question 'who invented the telephone?': Alexander Graham Bell is credited with inventing the first practical telephone in 1876."
+  },
+  {
+    "id": "1000181",
+    "title": "Scientists and Inventors",
+    "text": "Regarding the question 'who discovered penicillin?': Alexander Fleming discovered penicillin in 1928, leading to the development of antibiotics."
+  },
+  {
+    "id": "1000182",
+    "title": "Scientists and Inventors",
+    "text": "Regarding the question 'who developed the theory of evolution?': Charles Darwin developed the theory of evolution by natural selection, published in his 1859 book On the Origin of Species."
+  },
+  {
+    "id": "1000183",
+    "title": "Scientists and Inventors",
+    "text": "Regarding the question 'who invented the light bulb?': Thomas Edison is widely credited with developing the first commercially practical incandescent light bulb."
+  },
+  {
+    "id": "1000184",
+    "title": "Scientists and Inventors",
+    "text": "Regarding the question 'who was cv raman?': C. V. Raman was an Indian physicist who won the Nobel Prize in Physics in 1930 for his discovery of the Raman effect."
+  },
+  {
+    "id": "1000185",
+    "title": "Scientists and Inventors",
+    "text": "Regarding the question 'who was homi bhabha?': Homi J. Bhabha was an Indian physicist regarded as the father of India's nuclear programme."
+  },
+  {
+    "id": "1000186",
+    "title": "Scientists and Inventors",
+    "text": "Regarding the question 'who was aryabhata?': Aryabhata was an ancient Indian mathematician and astronomer known for his contributions to number theory and the concept of zero."
+  },
+  {
+    "id": "1000187",
+    "title": "Scientists and Inventors",
+    "text": "Regarding the question 'who invented the world wide web?': Tim Berners-Lee invented the World Wide Web in 1989 while working at CERN."
+  },
+  {
+    "id": "1000188",
+    "title": "Scientists and Inventors",
+    "text": "Regarding the question 'who discovered electricity?': Benjamin Franklin's famous kite experiment in 1752 helped demonstrate the electrical nature of lightning, though electricity as a phenomenon was studied by many scientists over centuries."
+  },
+  {
+    "id": "1000189",
+    "title": "Scientists and Inventors",
+    "text": "Regarding the question 'who was srinivasa ramanujan?': Srinivasa Ramanujan was a self-taught Indian mathematician known for his extraordinary contributions to number theory and mathematical analysis."
+  },
+  {
+    "id": "1000190",
+    "title": "Scientists and Inventors",
+    "text": "Regarding the question 'who founded isro?': Vikram Sarabhai is regarded as the founder of the Indian Space Research Organisation (ISRO)."
+  },
+  {
+    "id": "1000191",
+    "title": "Scientists and Inventors",
+    "text": "Regarding the question 'who invented the steam engine?': James Watt significantly improved the steam engine in the 18th century, making it efficient enough to power the Industrial Revolution."
+  },
+  {
+    "id": "1000192",
+    "title": "Scientists and Inventors",
+    "text": "Regarding the question 'who discovered the theory of relativity?': Albert Einstein developed the theory of relativity, fundamentally changing our understanding of space, time, and gravity."
+  },
+  {
+    "id": "1000193",
+    "title": "Scientists and Inventors",
+    "text": "Regarding the question 'who invented the printing press?': Johannes Gutenberg invented the movable-type printing press in the 15th century, revolutionizing the spread of written information."
+  },
+  {
+    "id": "1000194",
+    "title": "Literature",
+    "text": "Regarding the question 'who wrote the ramayana?': The Ramayana is traditionally attributed to the sage Valmiki."
+  },
+  {
+    "id": "1000195",
+    "title": "Literature",
+    "text": "Regarding the question 'who wrote the mahabharata?': The Mahabharata is traditionally attributed to the sage Vyasa."
+  },
+  {
+    "id": "1000196",
+    "title": "Literature",
+    "text": "Regarding the question 'who wrote romeo and juliet?': William Shakespeare wrote the tragedy Romeo and Juliet in the late 16th century."
+  },
+  {
+    "id": "1000197",
+    "title": "Literature",
+    "text": "Regarding the question 'who wrote the discovery of india?': Jawaharlal Nehru wrote The Discovery of India while imprisoned during the independence movement."
+  },
+  {
+    "id": "1000198",
+    "title": "Literature",
+    "text": "Regarding the question 'who wrote gitanjali?': Rabindranath Tagore wrote Gitanjali, a collection of poems for which he won the Nobel Prize in Literature in 1913."
+  },
+  {
+    "id": "1000199",
+    "title": "Literature",
+    "text": "Regarding the question 'who wrote the panchatantra?': The Panchatantra, a collection of animal fables, is traditionally attributed to the scholar Vishnu Sharma."
+  },
+  {
+    "id": "1000200",
+    "title": "Literature",
+    "text": "Regarding the question 'who wrote harry potter?': J. K. Rowling wrote the Harry Potter book series."
+  },
+  {
+    "id": "1000201",
+    "title": "Literature",
+    "text": "Regarding the question 'who wrote pride and prejudice?': Jane Austen wrote the novel Pride and Prejudice, published in 1813."
+  },
+  {
+    "id": "1000202",
+    "title": "Animals and Nature",
+    "text": "Regarding the question 'what is the national animal of india?': The Bengal tiger is the national animal of India."
+  },
+  {
+    "id": "1000203",
+    "title": "Animals and Nature",
+    "text": "Regarding the question 'what is the national bird of india?': The Indian peacock is the national bird of India."
+  },
+  {
+    "id": "1000204",
+    "title": "Animals and Nature",
+    "text": "Regarding the question 'what is the fastest land animal?': The cheetah is the fastest land animal, capable of reaching speeds up to 100-120 km/h in short bursts."
+  },
+  {
+    "id": "1000205",
+    "title": "Animals and Nature",
+    "text": "Regarding the question 'what is the largest mammal on earth?': The blue whale is the largest mammal, and the largest animal, ever known to have existed."
+  },
+  {
+    "id": "1000206",
+    "title": "Animals and Nature",
+    "text": "Regarding the question 'how long do elephants live?': Elephants typically live between 60 and 70 years in the wild."
+  },
+  {
+    "id": "1000207",
+    "title": "Animals and Nature",
+    "text": "Regarding the question 'what is a herbivore?': A herbivore is an animal that primarily eats plants and plant matter rather than meat."
+  },
+  {
+    "id": "1000208",
+    "title": "Animals and Nature",
+    "text": "Regarding the question 'what is the national flower of india?': The lotus is the national flower of India."
+  },
+  {
+    "id": "1000209",
+    "title": "Animals and Nature",
+    "text": "Regarding the question 'what is the tallest animal in the world?': The giraffe is the tallest living animal, with males reaching heights of up to 5.5 meters."
+  },
+  {
+    "id": "1000210",
+    "title": "Animals and Nature",
+    "text": "Regarding the question 'what do pandas mainly eat?': Giant pandas primarily eat bamboo, which makes up nearly their entire diet."
+  },
+  {
+    "id": "1000211",
+    "title": "Animals and Nature",
+    "text": "Regarding the question 'what is migration in animals?': Migration is the seasonal movement of animals from one region to another, often for breeding or to find food."
+  },
+  {
+    "id": "1000212",
+    "title": "Indian Government and Civics",
+    "text": "Regarding the question 'how many members are in the lok sabha?': The Lok Sabha, the lower house of India's Parliament, has a maximum strength of 552 members as per the Constitution, with the current effective strength around 543 elected members."
+  },
+  {
+    "id": "1000213",
+    "title": "Indian Government and Civics",
+    "text": "Regarding the question 'what is the minimum age to vote in india?': The minimum age to vote in India is 18 years."
+  },
+  {
+    "id": "1000214",
+    "title": "Indian Government and Civics",
+    "text": "Regarding the question 'who appoints the governor of an indian state?': The Governor of an Indian state is appointed by the President of India."
+  },
+  {
+    "id": "1000215",
+    "title": "Indian Government and Civics",
+    "text": "Regarding the question 'what is the tenure of the president of india?': The President of India serves a term of five years and can be re-elected."
+  },
+  {
+    "id": "1000216",
+    "title": "Indian Government and Civics",
+    "text": "Regarding the question 'what is the supreme court of india?': The Supreme Court of India is the highest judicial authority in the country, with the power of judicial review over legislation."
+  },
+  {
+    "id": "1000217",
+    "title": "Indian Government and Civics",
+    "text": "Regarding the question 'how many fundamental rights are guaranteed by the indian constitution?': The Indian Constitution guarantees six fundamental rights to its citizens, including the right to equality and the right to freedom."
+  },
+  {
+    "id": "1000218",
+    "title": "Indian Government and Civics",
+    "text": "Regarding the question 'what is the election commission of india?': The Election Commission of India is a constitutional body responsible for administering elections in the country."
+  },
+  {
+    "id": "1000219",
+    "title": "Indian Government and Civics",
+    "text": "Regarding the question 'what is panchayati raj?': Panchayati Raj is a system of local self-government in rural India, operating at the village, block, and district levels."
+  },
+  {
+    "id": "1000220",
+    "title": "Chemistry",
+    "text": "Regarding the question 'what is the atomic symbol and number of hydrogen?': Hydrogen's symbol is H, atomic number 1, the lightest and most abundant element in the universe."
+  },
+  {
+    "id": "1000221",
+    "title": "Chemistry",
+    "text": "Regarding the question 'what is the atomic symbol and number of oxygen?': Oxygen's symbol is O, atomic number 8, essential for respiration and combustion."
+  },
+  {
+    "id": "1000222",
+    "title": "Chemistry",
+    "text": "Regarding the question 'what is the atomic symbol and number of carbon?': Carbon's symbol is C, atomic number 6, the basis of all known organic life."
+  },
+  {
+    "id": "1000223",
+    "title": "Chemistry",
+    "text": "Regarding the question 'what is the atomic symbol and number of nitrogen?': Nitrogen's symbol is N, atomic number 7, making up about 78 percent of Earth's atmosphere."
+  },
+  {
+    "id": "1000224",
+    "title": "Chemistry",
+    "text": "Regarding the question 'what is the atomic symbol and number of iron?': Iron's symbol is Fe, atomic number 26, a metal widely used in construction and manufacturing."
+  },
+  {
+    "id": "1000225",
+    "title": "Chemistry",
+    "text": "Regarding the question 'what is the atomic symbol and number of gold?': Gold's symbol is Au, atomic number 79, a dense precious metal valued for jewelry and investment."
+  },
+  {
+    "id": "1000226",
+    "title": "Chemistry",
+    "text": "Regarding the question 'what is the atomic symbol and number of sodium?': Sodium's symbol is Na, atomic number 11, a reactive metal essential for nerve function in the body."
+  },
+  {
+    "id": "1000227",
+    "title": "Chemistry",
+    "text": "Regarding the question 'what is the atomic symbol and number of calcium?': Calcium's symbol is Ca, atomic number 20, essential for building strong bones and teeth."
+  },
+  {
+    "id": "1000228",
+    "title": "Everyday How-To",
+    "text": "Regarding the question 'how do i apply for a pan card in india?': You can apply for a PAN card online through the NSDL or UTIITSL portals by filling Form 49A and submitting identity and address proof documents."
+  },
+  {
+    "id": "1000229",
+    "title": "Everyday How-To",
+    "text": "Regarding the question 'how do i reset a forgotten email password?': Most email providers let you reset a forgotten password using the 'Forgot Password' link, which sends a verification code to your registered phone number or recovery email."
+  },
+  {
+    "id": "1000230",
+    "title": "Everyday How-To",
+    "text": "Regarding the question 'how do i check my aadhaar card status?': You can check your Aadhaar card status on the UIDAI website by entering your enrollment number or Aadhaar number."
+  },
+  {
+    "id": "1000231",
+    "title": "Everyday How-To",
+    "text": "Regarding the question 'how do i file income tax returns in india?': Income tax returns in India can be filed online through the Income Tax Department's e-filing portal by selecting the appropriate ITR form and submitting income and deduction details."
+  },
+  {
+    "id": "1000232",
+    "title": "Everyday How-To",
+    "text": "Regarding the question 'how do i link aadhaar with pan?': Aadhaar can be linked with PAN through the Income Tax e-filing portal by entering both numbers and verifying with an OTP."
+  },
+  {
+    "id": "1000233",
+    "title": "Everyday How-To",
+    "text": "Regarding the question 'how do i apply for a passport in india?': You can apply for an Indian passport online through the Passport Seva portal by filling the application form and scheduling an appointment at a Passport Seva Kendra."
+  },
+  {
+    "id": "1000234",
+    "title": "Everyday How-To",
+    "text": "Regarding the question 'how do i track a courier shipment?': Most courier services provide a tracking number that can be entered on their website or app to view real-time shipment status."
+  },
+  {
+    "id": "1000235",
+    "title": "Everyday How-To",
+    "text": "Regarding the question 'how do i renew a driving license in india?': A driving license can be renewed through the Parivahan Sewa portal or at the nearest RTO by submitting the renewal form and required documents."
+  },
+  {
+    "id": "1000236",
+    "title": "General Knowledge",
+    "text": "Regarding the question 'what is inflation?': Inflation is the rate at which the general price level of goods and services rises, reducing purchasing power over time."
+  },
+  {
+    "id": "1000237",
+    "title": "General Knowledge",
+    "text": "Regarding the question 'what is gdp?': GDP, or Gross Domestic Product, is the total monetary value of all goods and services produced within a country in a given period."
+  },
+  {
+    "id": "1000238",
+    "title": "General Knowledge",
+    "text": "Regarding the question 'what is the reserve bank of india?': The Reserve Bank of India is the country's central bank, responsible for regulating the monetary policy and issuing currency."
+  },
+  {
+    "id": "1000239",
+    "title": "General Knowledge",
+    "text": "Regarding the question 'what is a startup?': A startup is a young company founded to develop a unique product or service, often characterized by rapid growth and innovation."
+  },
+  {
+    "id": "1000240",
+    "title": "General Knowledge",
+    "text": "Regarding the question 'what is renewable energy?': Renewable energy comes from natural sources that replenish continuously, such as sunlight, wind, and water."
+  },
+  {
+    "id": "1000241",
+    "title": "General Knowledge",
+    "text": "Regarding the question 'what is a solar eclipse?': A solar eclipse occurs when the Moon passes between the Sun and the Earth, temporarily blocking the Sun's light."
+  },
+  {
+    "id": "1000242",
+    "title": "General Knowledge",
+    "text": "Regarding the question 'what is a lunar eclipse?': A lunar eclipse occurs when the Earth passes between the Sun and the Moon, casting a shadow on the Moon."
+  },
+  {
+    "id": "1000243",
+    "title": "General Knowledge",
+    "text": "Regarding the question 'what is the isro?': ISRO, the Indian Space Research Organisation, is India's national space agency responsible for the country's space programme."
+  },
+  {
+    "id": "1000244",
+    "title": "General Knowledge",
+    "text": "Regarding the question 'what is digital india?': Digital India is a government initiative aimed at transforming India into a digitally empowered society through improved online infrastructure and services."
+  },
+  {
+    "id": "1000245",
+    "title": "General Knowledge",
+    "text": "Regarding the question 'what is make in india?': Make in India is a government initiative launched to encourage companies to manufacture products within India and boost investment."
+  },
+  {
+    "id": "1000246",
+    "title": "General Knowledge",
+    "text": "Regarding the question 'what is gst in india?': GST, or Goods and Services Tax, is an indirect tax levied on the supply of goods and services across India, replacing many earlier indirect taxes."
+  },
+  {
+    "id": "1000247",
+    "title": "General Knowledge",
+    "text": "Regarding the question 'what is net neutrality?': Net neutrality is the principle that internet service providers must treat all data on the internet equally, without discriminating by content or user."
+  },
+  {
+    "id": "1000248",
+    "title": "General Knowledge",
+    "text": "Regarding the question 'what is a cyclone?': A cyclone is a large-scale system of winds rotating around a low-pressure center, often bringing heavy rain and strong winds."
+  },
+  {
+    "id": "1000249",
+    "title": "General Knowledge",
+    "text": "Regarding the question 'what is biodiversity?': Biodiversity refers to the variety of living organisms, including plants, animals, and microorganisms, found within a particular ecosystem or on Earth as a whole."
+  },
+  {
+    "id": "1000250",
+    "title": "General Knowledge",
+    "text": "Regarding the question 'what is the midday meal scheme?': The Midday Meal Scheme is an Indian government programme that provides free lunches to schoolchildren to improve nutrition and encourage school attendance."
+  },
+  {
+    "id": "1000251",
+    "title": "General Knowledge",
+    "text": "Regarding the question 'what is the national education policy 2020?': The National Education Policy 2020 is a comprehensive framework for reforming India's education system, from school to higher education."
+  },
+  {
+    "id": "1000252",
+    "title": "General Knowledge",
+    "text": "Regarding the question 'what is a monument of national importance?': A monument of national importance is a heritage site in India protected and maintained by the Archaeological Survey of India due to its historical significance."
+  },
+  {
+    "id": "1000253",
+    "title": "General Knowledge",
+    "text": "Regarding the question 'what is the swachh bharat mission?': The Swachh Bharat Mission is a nationwide campaign launched in India to eliminate open defecation and improve solid waste management."
+  },
+  {
+    "id": "1000254",
+    "title": "General Knowledge",
+    "text": "Regarding the question 'what is a union territory in india?': A Union Territory is an administrative division in India governed directly by the central government, unlike states which have their own elected governments."
+  },
+  {
+    "id": "1000255",
+    "title": "General Knowledge",
+    "text": "Regarding the question 'what is the difference between weather and climate?': Weather refers to short-term atmospheric conditions in a specific place, while climate describes long-term average weather patterns over a larger region and time period."
+  }
+]

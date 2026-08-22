@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voice RAG — Signal Console</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0e10;
+    --panel:#12161a;
+    --panel-border:#22282e;
+    --text:#e7e9ea;
+    --text-dim:#7c8790;
+    --signal:#4fd1c5;      /* teal — "on budget" */
+    --signal-dim:#1f4f4a;
+    --warn:#e8a33d;        /* amber — ungrounded / off-budget */
+    --danger:#e2604f;
+    --mono:'IBM Plex Mono', monospace;
+    --sans:'Inter', sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:var(--sans);
+    min-height:100vh;
+    display:flex; flex-direction:column; align-items:center;
+    padding:48px 20px 80px;
+  }
+  .eyebrow{
+    font-family:var(--mono); font-size:11px; letter-spacing:.18em;
+    text-transform:uppercase; color:var(--signal); margin-bottom:10px;
+  }
+  h1{
+    font-size:26px; font-weight:700; margin:0 0 6px; letter-spacing:-0.01em;
+  }
+  .sub{ color:var(--text-dim); font-size:14px; margin-bottom:44px; text-align:center; max-width:440px; }
+
+  /* --- mic control --- */
+  .mic-wrap{ position:relative; display:flex; flex-direction:column; align-items:center; gap:18px; }
+  .mic-btn{
+    width:96px; height:96px; border-radius:50%;
+    background:var(--panel); border:1.5px solid var(--panel-border);
+    color:var(--text); cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+    transition:border-color .2s, box-shadow .2s, transform .1s;
+    position:relative;
+  }
+  .mic-btn:hover{ border-color:var(--signal); }
+  .mic-btn:active{ transform:scale(.97); }
+  .mic-btn.recording{
+    border-color:var(--danger);
+    box-shadow:0 0 0 0 rgba(226,96,79,.5);
+    animation:pulse 1.4s infinite;
+  }
+  @keyframes pulse{
+    0%{ box-shadow:0 0 0 0 rgba(226,96,79,.45); }
+    70%{ box-shadow:0 0 0 16px rgba(226,96,79,0); }
+    100%{ box-shadow:0 0 0 0 rgba(226,96,79,0); }
+  }
+  .mic-btn svg{ width:30px; height:30px; }
+  .status{ font-family:var(--mono); font-size:12px; color:var(--text-dim); min-height:16px; }
+  .status.active{ color:var(--danger); }
+
+  /* --- answer card --- */
+  .answer-card{
+    margin-top:44px; width:100%; max-width:560px;
+    background:var(--panel); border:1px solid var(--panel-border); border-radius:10px;
+    padding:22px 24px; display:none;
+  }
+  .answer-card.show{ display:block; animation:fadeUp .35s ease; }
+  @keyframes fadeUp{ from{ opacity:0; transform:translateY(6px);} to{opacity:1; transform:none;} }
+  .answer-card .q{ font-family:var(--mono); font-size:12px; color:var(--text-dim); margin-bottom:10px; }
+  .answer-card .a{ font-size:16px; line-height:1.55; }
+  .flags{ margin-top:14px; display:flex; gap:8px; flex-wrap:wrap; }
+  .flag{
+    font-family:var(--mono); font-size:10.5px; padding:3px 8px; border-radius:20px;
+    border:1px solid var(--panel-border); color:var(--text-dim);
+  }
+  .flag.ok{ color:var(--signal); border-color:var(--signal-dim); }
+  .flag.warn{ color:var(--warn); border-color:#4a3c1f; }
+
+  /* --- signal path (signature element) --- */
+  .path{ margin-top:26px; width:100%; max-width:560px; display:none; }
+  .path.show{ display:block; }
+  .path-title{ font-family:var(--mono); font-size:11px; color:var(--text-dim); margin-bottom:10px; letter-spacing:.06em; }
+  .track{
+    display:flex; width:100%; height:34px; border-radius:6px; overflow:hidden;
+    background:var(--panel); border:1px solid var(--panel-border);
+  }
+  .seg{
+    height:100%; background:var(--signal-dim); position:relative;
+    transition:flex-grow .5s ease, background .3s ease;
+    flex-grow:0;
+    border-right:1px solid var(--bg);
+  }
+  .seg:last-child{ border-right:none; }
+  .seg.lit{ background:var(--signal); }
+  .seg.hot{ background:var(--warn); } /* stage that blew the retrieval budget */
+  .legend{
+    display:flex; flex-wrap:wrap; gap:12px; margin-top:10px;
+    font-family:var(--mono); font-size:10.5px; color:var(--text-dim);
+  }
+  .legend span b{ color:var(--text); }
+  .budget-note{
+    margin-top:8px; font-family:var(--mono); font-size:10.5px; color:var(--text-dim);
+  }
+
+  footer{ margin-top:60px; font-family:var(--mono); font-size:10.5px; color:#3d454b; text-align:center; }
+</style>
+</head>
+<body>
+
+  <div class="eyebrow">voice → retrieve → ground</div>
+  <h1>Signal Console</h1>
+  <p class="sub">Hold the mic, ask about returns, orders, or warranty. Every reply below is traced end to end, stage by stage.</p>
+
+  <div class="mic-wrap">
+    <button class="mic-btn" id="micBtn" aria-label="Record question">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+        <path d="M19 10v1a7 7 0 0 1-14 0v-1"/>
+        <path d="M12 18v4M9 22h6"/>
+      </svg>
+    </button>
+    <div class="status" id="status">tap to ask</div>
+  </div>
+
+  <div class="answer-card" id="answerCard">
+    <div class="q" id="queryText"></div>
+    <div class="a" id="answerText"></div>
+    <div class="flags" id="flags"></div>
+  </div>
+
+  <div class="path" id="path">
+    <div class="path-title">SIGNAL PATH — latency by stage</div>
+    <div class="track" id="track"></div>
+    <div class="legend" id="legend"></div>
+    <div class="budget-note" id="budgetNote"></div>
+  </div>
+
+  <footer>FAISS + BM25, in-process · retrieval budget 200ms · elevenlabs stt</footer>
+
+<script>
+const micBtn = document.getElementById('micBtn');
+const statusEl = document.getElementById('status');
+const answerCard = document.getElementById('answerCard');
+const queryText = document.getElementById('queryText');
+const answerText = document.getElementById('answerText');
+const flagsEl = document.getElementById('flags');
+const pathEl = document.getElementById('path');
+const trackEl = document.getElementById('track');
+const legendEl = document.getElementById('legend');
+const budgetNote = document.getElementById('budgetNote');
+
+let mediaRecorder, chunks = [], recording = false;
+
+// Which timing keys count toward the <200ms retrieval budget vs network legs
+const RETRIEVAL_KEYS = ['query_embed_ms','retrieval.embed_ms','retrieval.search_ms','retrieval.fuse_ms','retrieval.rerank_ms','cache_lookup_ms'];
+const RETRIEVAL_BUDGET_MS = 200;
+
+const STAGE_LABELS = {
+  stt_ms: 'STT',
+  query_embed_ms: 'embed',
+  cache_lookup_ms: 'cache',
+  'retrieval.embed_ms': 'q-embed',
+  'retrieval.search_ms': 'search',
+  'retrieval.fuse_ms': 'fuse',
+  'retrieval.rerank_ms': 'rerank',
+  generation_ms: 'generate',
+  output_guardrail_ms: 'ground-check',
+};
+
+micBtn.addEventListener('click', async () => {
+  if (!recording) {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      mediaRecorder = new MediaRecorder(stream);
+      chunks = [];
+      mediaRecorder.ondataavailable = e => chunks.push(e.data);
+      mediaRecorder.onstop = handleRecordingStop;
+      mediaRecorder.start();
+      recording = true;
+      micBtn.classList.add('recording');
+      statusEl.textContent = 'listening… tap to stop';
+      statusEl.classList.add('active');
+    } catch (err) {
+      statusEl.textContent = 'mic access denied';
+    }
+  } else {
+    mediaRecorder.stop();
+    mediaRecorder.stream.getTracks().forEach(t => t.stop());
+    recording = false;
+    micBtn.classList.remove('recording');
+    statusEl.classList.remove('active');
+    statusEl.textContent = 'thinking…';
+  }
+});
+
+async function handleRecordingStop() {
+  const blob = new Blob(chunks, { type: 'audio/webm' });
+  const form = new FormData();
+  form.append('audio', blob, 'question.webm');
+
+  try {
+    const res = await fetch('/api/voice-query', { method: 'POST', body: form });
+    const data = await res.json();
+    if (!res.ok) {
+      statusEl.textContent = data.detail || 'speech-to-text failed — check the server logs';
+      return;
+    }
+    renderResult(data);
+  } catch (err) {
+    statusEl.textContent = 'request failed — is the server running?';
+  }
+}
+
+function renderResult(data) {
+  statusEl.textContent = 'tap to ask';
+
+  queryText.textContent = data.query_text ? `"${data.query_text}"` : '(no transcript)';
+  answerText.textContent = data.answer;
+  answerCard.classList.add('show');
+
+  flagsEl.innerHTML = '';
+  addFlag(data.cache_hit ? 'cache hit' : 'cache miss', data.cache_hit);
+  if (data.groundedness) {
+    addFlag(data.groundedness.overall_grounded ? 'grounded' : 'check citations', data.groundedness.overall_grounded);
+  }
+  if (data.on_topic === false) addFlag('off-topic query', false);
+
+  renderPath(data.timings_ms || {});
+}
+
+function addFlag(label, ok) {
+  const el = document.createElement('div');
+  el.className = 'flag ' + (ok ? 'ok' : 'warn');
+  el.textContent = label;
+  flagsEl.appendChild(el);
+}
+
+function renderPath(timings) {
+  trackEl.innerHTML = '';
+  legendEl.innerHTML = '';
+
+  const entries = Object.entries(STAGE_LABELS)
+    .filter(([key]) => timings[key] !== undefined)
+    .map(([key, label]) => [label, timings[key], key]);
+
+  if (entries.length === 0) { pathEl.classList.remove('show'); return; }
+  pathEl.classList.add('show');
+
+  const total = entries.reduce((s, [, ms]) => s + ms, 0) || 1;
+  let retrievalMs = 0;
+
+  entries.forEach(([label, ms, key]) => {
+    const seg = document.createElement('div');
+    seg.className = 'seg lit';
+    seg.style.flexGrow = Math.max(ms / total, 0.02);
+    seg.title = `${label}: ${ms.toFixed(1)}ms`;
+    trackEl.appendChild(seg);
+
+    const item = document.createElement('span');
+    item.innerHTML = `${label} <b>${ms.toFixed(1)}ms</b>`;
+    legendEl.appendChild(item);
+
+    if (RETRIEVAL_KEYS.includes(key)) retrievalMs += ms;
+  });
+
+  const overBudget = retrievalMs > RETRIEVAL_BUDGET_MS;
+  budgetNote.innerHTML = `retrieval leg: <b style="color:${overBudget ? 'var(--warn)' : 'var(--signal)'}">${retrievalMs.toFixed(1)}ms</b> / ${RETRIEVAL_BUDGET_MS}ms budget`;
+}
+</script>
+</body>
+</html>

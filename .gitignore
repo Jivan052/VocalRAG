@@ -1,0 +1,18 @@
+# Secrets and local configuration
+.env
+!.env.example
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Local tooling and OS files
+.DS_Store
+.vscode/
+
+# Generated retrieval index artifacts
+index/bm25.pkl
